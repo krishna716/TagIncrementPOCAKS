@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: krishnatagincrementpocaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: krishnatagincrementpocaks
+  template:
+    metadata:
+      labels:
+        app: krishnatagincrementpocaks 
+    spec:
+      containers:
+        - name: krishnatagincrementpocaks 
+          image: ipasqacontainerregistry.azurecr.io/krishnatagincrementpocaks
+          ports:
+          - containerPort: 80
